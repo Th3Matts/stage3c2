@@ -28,11 +28,11 @@ input::placeholder{
   line-height: 160%;
 }
 
-.area{
+#app{
   height: 100dvh;
 
   display: grid;
-  grid-template-rows: max-content 1fr 1fr max-content;
+  grid-template-rows: max-content 1fr max-content;
 }
 
 header,
@@ -58,8 +58,6 @@ header{
 }
 
 form{
-  display: table-cell;
-
   flex: 1;
 }
 
@@ -91,24 +89,31 @@ nav img{
   height: 42px;
 }
 
-main img{
+.article-wrapper{
+  width: 70%;
+}
+
+.article-wrapper img{
   width: 100%;
 
   display: block;
 }
 
-.title-wrapper,
-.related-wrapper{
-  width: min(70rem, 80%);
-  margin: 2rem auto;
-}
-
 .title-wrapper{
-
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
 
+.related-wrapper{
+  margin-top: 2rem;
+}
+
+main{
+  display: flex;
+  gap: 2rem;
+
+  margin-top: 2rem;
 }
 
 main h2, aside{
@@ -132,12 +137,7 @@ main p, aside{
   font-size: 1rem;
   line-height: 160%;
 
-  margin-top: 2rem;
-}
-
-aside h2{
-  margin: 0 auto;
-  width: min(70rem, 80%);
+  margin-top: 12px;
 }
 
 .related-wrapper{
@@ -157,13 +157,12 @@ footer{
   background: var(--color-light-green);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .container{
     width: max(80%, 800px);
   }
 
-  .area{
-    
+  #app{
     display: grid;
     grid-template-rows: max-content 1fr max-content;
     grid-template-areas: 
