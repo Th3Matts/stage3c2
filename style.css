@@ -1,9 +1,20 @@
+/* 
+
+1. Padrões da página
+2. Fontes
+3. Grid
+4. Conteúdo da página
+5. Media queries
+6. Animações
+
+*/
+
+
+/* 1. Padrões */
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  text-decoration: none;
 }
 
 :root{
@@ -16,18 +27,49 @@
   --color-text-p: #121214;
 }
 
+html{
+  background: var(--color-white-10);
+}
+
+/* 2. Fontes */
 body,
 a,
 input,
 input::placeholder{
   color: var(--color-white);
   font-family: Mulish;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 140%;
 }
 
+.container a{
+  text-decoration: none;
+}
+
+main .title-wrapper,
+aside h2{
+  color: var(--color-text-h);
+
+  font-size: 1.5rem;
+}
+
+aside .title-wrapper h3{
+  color: var(--color-text-h);
+
+  font-size: 1.125rem;
+}
+
+main p{
+  color: var(--color-text-p);
+}
+
+.related-article p{
+  font-size: 0.875rem;
+}
+
+/* 3. Grid da página */
 #app{
   height: 100dvh;
 
@@ -35,162 +77,216 @@ input::placeholder{
   grid-template-rows: max-content 1fr max-content;
 }
 
-header,
-footer,
-nav.container a{
-  display: flex;
-  justify-content: center;
+/* 4. Conteúdo da página */
+.container{
+  width: min(90rem, 90%);
+  margin: 0 auto;
 }
 
 header{
   background: var(--color-dark-green);
 
-  padding: 12px;
+  padding: 12px 0;
 }
 
-.container{
-  width: max(90%, 700px);
-
+header .container,
+footer .container{
   display: flex;
+  justify-content: center;
   align-items: center;
-  
-  gap: 1.50rem;
+  gap: 1.5rem;
 }
 
-form{
-  flex: 1;
-}
-
-.input-wrapper input{
-  background: var(--color-opacity);
-
-  width: 100%;
-
-  border: none;
-  border-radius: 5px;
-
-  overflow: auto;
-
-  padding: 12px 16px 12px 14px;
-}
-
-.input-wrapper label{
-  width: 1px;
-  height: 1px;
-
-  overflow: hidden;
-  position: absolute;
-}
-
-nav img{
+header .container img{
   border-radius: 50%;
 
   width: 42px;
   height: 42px;
 }
 
-.article-wrapper{
-  width: 70%;
+header .container a img{
+  display: flex;
+
+  align-items: center; 
 }
 
-.article-wrapper img{
+header .container form{
+  flex: 1;
+}
+
+header .container input{
+  background: var(--color-opacity);
+
+  border: none;
+  border-radius: 4px;
+
   width: 100%;
 
-  display: block;
+  padding: 12px 16px 12px 14px;
+}
+
+header .container label{
+  width: 1px;
+  height: 1px;
+
+  position: absolute;
+  overflow: hidden;
+  
+}
+
+main{
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  padding: 2rem 0;
 }
 
 .title-wrapper{
   display: flex;
   flex-direction: column;
+
   gap: 8px;
+
+  margin: 2rem 0;
 }
 
-.related-wrapper{
-  margin-top: 2rem;
-}
-
-main{
-  display: flex;
-  gap: 2rem;
-
-  margin-top: 2rem;
-}
-
-main h2, aside{
-  color: var(--color-text-h);
-}
-
-main button{
+.title-wrapper button{
   background: var(--color-dark-green);
 
   border-radius: 50%;
   border: none;
-  width: 42px;
-  height: 42px;
 
-  padding: 10px;
+  padding: 12px;
 }
 
-main p, aside{
-  color: var(--color-text-p);
-
-  font-size: 1rem;
-  line-height: 160%;
-
-  margin-top: 12px;
-}
-
-.related-wrapper{
+.button-wrapper{
   display: flex;
-
-  gap: 8px;
+  gap: 12px;
 }
 
-.related-wrapper img{
+.main-article figure img{
   border-radius: 5px;
 
-  width: 151px;
-  height: fit-content;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+
+  display: block;
+}
+
+.item img:hover{
+  filter: hue-rotate(7deg) contrast(102%) saturate(200%);
+}
+
+aside{
+  margin-bottom: 2rem;
+}
+
+.item{
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+}
+
+.item img{
+  border-radius: 5px;
+
+  width: 9rem;
+  height: 84px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+
+  overflow: hidden;
+
+  transition: .4s linear;
+}
+
+.item img:hover{
+  filter: hue-rotate(7deg) contrast(102%) saturate(200%);
+}
+
+.details{
+  width: 60%;
+  height: min-content;
+
+  position: relative;
+  z-index: 1;
+}
+
+.related-article .title-wrapper{
+  margin: 0;
 }
 
 footer{
   background: var(--color-light-green);
 }
 
-@media (min-width: 1024px) {
-  .container{
-    width: max(80%, 800px);
-  }
+footer .container{
+  padding: 1rem;
+}
 
+/* 5. Media queries */
+
+@media (min-width: 1024px) {
   #app{
-    display: grid;
-    grid-template-rows: max-content 1fr max-content;
+    height: 100vh;
+
     grid-template-areas: 
     'header header header'
-    'main main aside'
+    'main main main'
     'footer footer footer'
     ;
   }
-  
+
+  .container{
+    width: min(90rem, 90%);
+    margin: 0 auto;
+  }
+
   header{
     grid-area: header;
   }
-  
+
   main{
-    width: max(80%, 800px);
-    /* border: solid 5px #ffcaff; */
-    margin:  auto;
     grid-area: main;
+
+    flex-direction: row;
   }
-  
+
+  .title-wrapper{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-article{
+    width: 70%;
+  }
+
   aside{
-    /* border: solid 5px #ffcaca; */
-    grid-area: aside;
-  
-    height: 1fr;
+    width: 40%;
   }
-  
+
   footer{
     grid-area: footer;
+  }
+}
+
+/* 6. Animações */
+
+.item{
+  --delayCard: .4s;
+  animation: appear 3s var(--delayCard) backwards linear;
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
   }
 }

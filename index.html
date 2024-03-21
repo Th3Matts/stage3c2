@@ -1,131 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-
-  <title>Blog dos gatos</title>
-
-  <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="./assets/favicon.svg">
+  <title>Blog de gatos</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="#app">
-    <header>
+<div id="app">
 
-      <nav class="container">
+  <header>
+    <nav class="container">
         <a href="#">
-          <img src="./assets/paw.svg" alt="Botão que leva a homepage">
+          <img src="./assets/paw.svg" alt="Icone da página inicial">
         </a>
 
         <form>
-          <div class="input-wrapper">
-            <label for="search-bar"> Pesquise por artigos </label>
-            <input type="search" id="search-bar" placeholder="Pesquise por artigos">
-          </div>
+          <label for="search-bar"> Pesquise por artigos aqui </label>
+          <input type="search" id="search-bar" placeholder="Pesquise por artigos aqui">
         </form>
 
-        <a href="https://www.instagram.com/themattsmatts/" target="_blank">
-          <img src="./assets/profile.jpeg" alt="Foto de perfil do usuário">
+        <a href="#">
+          <img src="./assets/profile.jpeg" alt="Foto do perfil de usuário">
         </a>
-      </nav>
-    </header>
-   <main>
+    </nav>
+  </header>
 
-    <div class="article-wrapper">
-      <img src="./assets/cat1.jpeg" alt="">
-      
-      <div class="title-wrapper">
-        <h2> Seriam os gatos astronautas? </h2>
+  <main class="container">
+    <div class="main-article">
 
-        <div class="button-wrapper">
-          <button><img src="./assets/positive.svg" alt="Botão de nota positiva no artigo"></button>
-          <button><img src="./assets/negative.svg" alt="Botão de nota negativa no artigo"></button>
+      <article>
+        <figure>
+          <img src="./assets/cat1.jpeg" alt="Imagem do artigo em relação">
+        </figure>
+          <div class="title-wrapper">
+            <h2>Seriam os gatos astronautas?</h2>
+            <div class="button-wrapper">
+              <button><img src="./assets/positive.svg" alt="Botão de votar positivamente no artigo"></button>
+              <button><img src="./assets/negative.svg" alt="Botão de votar negativamente no artigo"></button>              
+            </div>
         </div>
-
-        <figcaption>
+        <section>
           <p>
             Os gatos são animais fascinantes e cercados de mistérios. 
-            De temperamento independente e misterioso, esses felinos são 
-            conhecidos por sua agilidade, elegância e um comportamento 
-            muitas vezes imprevisível. 
-            Contudo, recentemente, uma teoria tem ganhado espaço na 
-            internet e entre teóricos de conspiração: seriam os gatos 
-            astronautas?<br>
-            A teoria sugere que os gatos não são animais terrestres, 
-            mas sim seres extraterrestres enviados para realizar uma 
-            missão específica em nosso planeta. Há relatos históricos 
-            que apontam para o fato de que os gatos eram considerados 
-            seres sagrados em diferentes culturas e até mesmo associados 
-            a figuras divinas. Isso poderia indicar que os gatos têm uma 
-            origem muito mais mística do que se pensava anteriormente.<br>
-            <br>
+            De temperamento independente e misterioso, esses felinos 
+            são conhecidos por sua agilidade, elegância e um 
+            comportamento muitas vezes imprevisível. Contudo, 
+            recentemente, uma teoria tem ganhado espaço na internet e 
+            entre teóricos de conspiração: seriam os gatos astronautas?<br>
+            A teoria sugere que os gatos não são animais terrestres, mas sim
+             seres extraterrestres enviados para realizar uma missão 
+             específica em nosso planeta. Há relatos históricos que apontam 
+             para o fato de que os gatos eram considerados seres sagrados em 
+             diferentes culturas e até mesmo associados a figuras divinas. 
+             Isso poderia indicar que os gatos têm uma origem muito mais 
+             mística do que se pensava anteriormente.<br>
+             <br>
             Além disso, há teóricos que acreditam que os felinos possuem 
             habilidades telepáticas e são capazes de se comunicar com outras 
             espécies alienígenas. Essa crença baseia-se em relatos de pessoas 
             que afirmam terem visto gatos reagindo a estímulos que não são 
             perceptíveis aos seres humanos, ou até mesmo se comportando de 
-            maneira incomum durante eventos astronômicos, como uma aurora boreal. 
-            Esses e outros indícios foram interpretados como sinais de que os 
-            gatos seriam seres interplanetários.
+            maneira incomum durante eventos astronômicos, como uma aurora 
+            boreal. Esses e outros indícios foram interpretados como sinais 
+            de que os gatos seriam seres interplanetários.
           </p>
-        </figcaption>
-      </div>
-      
+        </section>
+      </article>
+
     </div>
-    
     <aside>
       <h2>Artigos relacionados</h2>
-      <div class="related-wrapper">
-          <img src="./assets/cat2.jpeg" alt="">
-          <section>
-            <h3>Sábado preguiçoso</h3>
-            <p>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</p>
-          </section>
-        </div>
-        <div class="related-wrapper">
-          <img src="./assets/cat2.jpeg" alt="">
-          <section>
-            <h3>Sábado preguiçoso</h3>
-            <p>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</p>
-          </section>
-        </div>
-        <div class="related-wrapper">
-          <img src="./assets/cat2.jpeg" alt="">
-          <section>
-            <h3>Sábado preguiçoso</h3>
-            <p>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</p>
-          </section>
-        </div>
-        <div class="related-wrapper">
-          <img src="./assets/cat2.jpeg" alt="">
-          <section>
-            <h3>Sábado preguiçoso</h3>
-            <p>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</p>
-          </section>
-        </div>
-        <div class="related-wrapper">
-          <img src="./assets/cat2.jpeg" alt="">
-          <section>
-            <h3>Sábado preguiçoso</h3>
-            <p>Descubra atividades interessantes para fazer com seu pet durante os finais de semana.</p>
-          </section>
-        </div>
+      <div class="related-article">
+
+          <figure class="item">
+            <img src="./assets/cat2.jpeg" alt="Imagem do artigo relacionado">
+            <figcaption class="details">
+              <div class="title-wrapper">
+                <h3> Sábado preguiçoso </h3>
+              </div>
+              <p>
+                Descubra atividades interessantes para fazer com seu pet durante os finais de semana.
+              </p>
+            </figcaption>
+          </figure>
+
+
+          <figure class="item" style="--delayCard: 1s">
+            <img src="./assets/cat3.jpeg" alt="Imagem do artigo relacionado">
+            <figcaption class="details">
+              <div class="title-wrapper">
+                <h3> Balaio de gatos </h3>
+              </div>
+              <p>
+                Como evitar confusões entre seus gatíneos e acostumá-los desde filhotes.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="item" style="--delayCard: 1.5s">
+            <img src="./assets/cat4.jpeg" alt="Imagem do artigo relacionado">
+            <figcaption class="details">
+              <div class="title-wrapper">
+                <h3> Cartela de cores </h3>
+              </div>
+              <p>
+                Seu gato é inverno intenso? Verão profundo? Descubra as cores que mais combinam com seu bichano.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="item" style="--delayCard: 2s">
+            <img src="./assets/cat5.jpeg" alt="Imagem do artigo relacionado">
+            <figcaption class="details">
+              <div class="title-wrapper">
+                <h3> Os gatos sentem frio? </h3>
+              </div>
+              <p>
+                Preparem-se para a frente fria que vem para o país da melhor maneira possível.
+              </p>
+            </figcaption>
+          </figure>
+
+          <figure class="item" style="--delayCard: 2.5s">
+            <img src="./assets/cat6.jpeg" alt="Imagem do artigo relacionado">
+            <figcaption class="details">
+              <div class="title-wrapper">
+                <h3> Conheça o Moacir </h3>
+              </div>
+              <p>
+                Moacir é o gatinho da semana do nosso blog. Venha conhecer sua história de superação.
+              </p>
+            </figcaption>
+          </figure>
+
+      </div>
     </aside>
   </main>
 
-   <footer>
-    <p>
-      © 2023 - Rocketseat Explorer | <a href="https://github.com/Th3Matts" target="_blank">th3matts</a>
-    </p>
-   </footer>
-  </div>
+  <footer>  
+      <div class="container">
+        <p>
+          © 2023 - Rocketseat Explorer | <a href="https://github.com/Th3Matts" target="_blank">th3matts</a>
+        </p>
+      </div>
+  </footer>
+
+</div>
 </body>
 </html>
