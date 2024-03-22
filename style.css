@@ -187,12 +187,9 @@ aside{
 
 .item{
   display: flex;
-  gap: 1rem;
   margin-top: 2rem;
 
   overflow: hidden;
-
-  border-radius: 5px;
 }
 
 .item img{
@@ -203,8 +200,6 @@ aside{
   aspect-ratio: 16/9;
   object-fit: cover;
 
-  overflow: hidden;
-
   transition: .4s linear;
 }
 
@@ -213,8 +208,9 @@ aside{
 }
 
 .details{
-  width: 60%;
-  height: min-content;
+  background: var(--color-white-10);
+
+  padding-left: 1rem;
 
   position: relative;
   z-index: 1;
@@ -282,7 +278,7 @@ footer .container{
 
 .item{
   --delayCard: .4s;
-  animation: appear 3s var(--delayCard) backwards linear;
+  animation: appear 2s var(--delayCard) backwards linear;
 }
 
 @keyframes appear {
